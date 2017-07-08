@@ -28,6 +28,8 @@ React 最重要的步骤，创建虚拟DOM，进行diff算法，更新DOM树都�
 
 其实 mountComponent 本质是通过**递归**渲染内容的，由于递归的特性，父组件的 componentWillMount 在其子组件的 componentWillMount 之前调用，而父组件的 componentDidMount 在其子组件的 componentDidMount 之后调用。
 
+![](https://pic3.zhimg.com/ec65c26c1123f588c2a57e40423cf6fa_b.png)
+
 ## 2.updateComponent会触发5个钩子函数
 
 **componentWillReceivePorps(nextProps)**
@@ -51,6 +53,8 @@ React 性能优化非常重要的一环。组件接受新的 state 或者 props 
 组件初始化时不调用，组件更新完成后调用，此时可以获取DOM节点。
 
 updateComponent 本质上也是通过递归完成的，由于递归的特性，父组件的 componentWillUpdate 在其子组件的 componentWillUpdate 之前调用，而父组件的 componentDidUpdate 在其子组件的 componentDidUpdate 之后调用。
+
+![](https://pic1.zhimg.com/34357c2a84e53be3619667ffa4ebbc90_b.png)
 
 ## 3.unmountComponent触发1个钩子函数
 
